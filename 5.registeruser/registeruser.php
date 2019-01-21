@@ -26,7 +26,7 @@ function getClientIp() {
     } else {
         $ip = $_SERVER['REMOTE_ADDR'];
     }
-    return filter_var($ip, FILTER_VALIDATE_IP)?:false;
+    return filter_var($ip, FILTER_VALIDATE_IP);
 }
 
 function isUkraineIp($ip) {
