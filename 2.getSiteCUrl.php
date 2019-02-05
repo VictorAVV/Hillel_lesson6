@@ -15,6 +15,14 @@ function getSiteCode($url) {
     return $result;
     
 }
-
+echo '<pre>'; //<pre> - для вывода отформатированного текста - с несколькими пробелами, табуляцией и переносом строк
 echo htmlspecialchars(getSiteCode($siteUrl));
+echo '<pre/>';
+
+/* Если загружается сайт в кодировке 1251, то нужно указать хэдер:
+    header('Content-type: text/html; charset=windows-1251');
+и указать кодировку страницы в htmlspecialchars:
+    htmlspecialchars($result, ENT_QUOTES, "windows-1251");
+*/
+
 ?>
